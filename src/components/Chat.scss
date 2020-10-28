@@ -1,0 +1,79 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  width: 80%;
+
+  $breakpoint-large-screen: 1700px;
+  $breakpoint-medium-screen: 1350px;
+  $breakpoint-extra-small-screen: 1100px;
+  $breakpoint-small-screen: 950px;
+  $breakpoint-tablet: 768px;
+  @media (max-width: $breakpoint-large-screen) {
+    width: 75%;
+  }
+  @media (max-width: $breakpoint-medium-screen) {
+    width: 70%;
+  }
+  @media (max-width: $breakpoint-small-screen) {
+    width: 65%;
+  }
+  @media (max-width: $breakpoint-extra-small-screen) {
+    width: 60%;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    width: 60%;
+  }
+
+  .chat__header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    background-color: #f5f5f5;
+
+    h4 {
+      font-weight: 500;
+      color: gray;
+
+      .chat__name {
+        color: black;
+      }
+    }
+  }
+
+  .chat__messages {
+    flex: 1;
+    overflow: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .chat__input {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid lightgray;
+    background-color: #f5f5f5;
+
+    form {
+      flex: 1;
+      display: flex;
+
+      input {
+        width: 98%;
+        outline-width: 0;
+        border: 1px solid lightgray;
+        border-radius: 999px;
+        padding: 5px;
+      }
+    }
+  }
+}

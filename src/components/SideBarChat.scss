@@ -1,0 +1,33 @@
+.sidebarchat {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+  font-size: 15px;
+
+  .sidebarchat__container {
+    display: flex;
+    height: 64px;
+    border-radius: 20px;
+    width: 100%;
+    align-items: center;
+
+    &:hover {
+      background-color: #3e93fd;
+      color: white;
+    }
+
+    &:active {
+      background-color: #e1e1e1e1;
+    }
+
+    .sidebarchat__avatar {
+      margin: 15px;
+    }
+
+    .sidebarchat__info {
+      width: 100%;
+    }
+  }
+
+}
